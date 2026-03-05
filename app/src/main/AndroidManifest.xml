@@ -19,7 +19,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:label="Log In"
+            android:label="Login to Manila LinkUp"
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
