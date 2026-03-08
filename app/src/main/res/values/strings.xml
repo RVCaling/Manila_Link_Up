@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Manila Link Up</string>
+    <string name="default_web_client_id">
+        193255027750-g566qk5l0o7ivr27bfvueoh682nf2loh.apps.googleusercontent.com
+    </string>
 </resources>
