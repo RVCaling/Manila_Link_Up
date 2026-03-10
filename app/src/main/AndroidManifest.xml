@@ -48,6 +48,18 @@
             android:parentActivityName=".MainActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".EmployerSignUp"
+            android:label="Employer Sign Up"
+            android:parentActivityName=".MainActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ProfessionalIdentity"
+            android:label="Professional Identity"
+            android:parentActivityName=".MainActivity"
+            android:exported="false"/>
+
         <!-- SMS Broadcast Receiver for OTP -->
         <receiver
             android:name=".SMSBroadcastReceiver"
