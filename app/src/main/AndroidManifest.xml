@@ -12,10 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ManilaLinkUp">
         <activity
+            android:name=".ProfileJobSeekerActivity"
+            android:exported="false"
+            android:label="Edit Profile for Job Seeker"
+            android:parentActivityName=".OTPVerificationActivity"/>
+        <activity
             android:name=".EmployerSIgnUp"
             android:exported="false"
             android:label="Employer Sign Up"
-            android:parentActivityName=".GetStarted"/>
+            android:parentActivityName=".GetStarted" />
         <activity
             android:name=".OTPVerificationActivity"
             android:exported="false"
