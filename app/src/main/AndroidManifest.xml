@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.manilalinkup.app">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -12,54 +11,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ManilaLinkUp">
-
-        <!-- Main launcher activity -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- Other activities -->
+            android:name=".EmployerSIgnUp"
+            android:exported="false"
+            android:label="Employer Sign Up"
+            android:parentActivityName=".GetStarted" />
         <activity
             android:name=".OTPVerificationActivity"
-            android:exported="false"
             android:label="OTP Verification"
-            android:parentActivityName=".SignUpActivity" />
-
+            android:parentActivityName=".SignUpActivity"
+            android:exported="false" />
         <activity
             android:name=".GetStarted"
             android:exported="false"
             android:label="Let's Get Started"
             android:parentActivityName=".SignUpActivity" />
-
         <activity
             android:name=".SignUpActivity"
             android:exported="false"
             android:label="Sign Up"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".LoginActivity"
             android:exported="false"
             android:label="Login to Manila LinkUp"
             android:parentActivityName=".MainActivity" />
-
         <activity
-            android:name=".EmployerSignUp"
-            android:exported="false"
-            android:label="Employer Sign Up"
-            android:parentActivityName=".MainActivity" />
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity
-            android:name=".ProfessionalIdentity"
-            android:exported="false"
-            android:label="Professional Identity"
-            android:parentActivityName=".MainActivity" />
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
