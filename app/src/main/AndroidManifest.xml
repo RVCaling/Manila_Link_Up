@@ -60,16 +60,6 @@
             android:parentActivityName=".MainActivity"
             android:exported="false" />
 
-        <!-- SMS Broadcast Receiver for OTP -->
-        <receiver
-            android:name=".SMSBroadcastReceiver"
-            android:exported="false"
-            tools:ignore="Instantiatable">
-            <intent-filter>
-                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
-            </intent-filter>
-        </receiver>
-
     </application>
 
 </manifest>
