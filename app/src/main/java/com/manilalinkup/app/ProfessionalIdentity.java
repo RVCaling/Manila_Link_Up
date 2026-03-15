@@ -3,6 +3,7 @@ package com.manilalinkup.app;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
@@ -13,6 +14,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.datepicker.MaterialDatePicker;
@@ -23,8 +25,8 @@ import java.util.Calendar;
 public class ProfessionalIdentity extends AppCompatActivity {
 
     ImageView profileImage;
-    MaterialButton uploadClearancebtn, uploadIDbtn;
-
+    MaterialToolbar toolbar;
+    MaterialButton uploadClearancebtn, uploadIDbtn, savebtn;
     AutoCompleteTextView locationDropdown;
     TextInputEditText dobEditText;
 
@@ -47,12 +49,27 @@ public class ProfessionalIdentity extends AppCompatActivity {
 
         salaryTypeGroup = findViewById(R.id.salaryTypeGroup);
         salaryRangeGroup = findViewById(R.id.salaryRangeGroup);
+        savebtn = findViewById(R.id.savebtn);
+
 
         setupImagePicker();
         setupFilePicker();
         setupLocationDropdown();
         setupSalaryTypeRadio();
         setupDobPicker();
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        savebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent jobSeekerActivityIntent = new Intent(ProfessionalIdentity.this, JobSeekerDashboardActivity.class);
+                startActivity(jobSeekerActivityIntent);
+            }
+        });
     }
 
     private void setupImagePicker() {

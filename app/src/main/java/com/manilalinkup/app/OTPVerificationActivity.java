@@ -37,6 +37,15 @@ public class OTPVerificationActivity extends AppCompatActivity {
         b4 = findViewById(R.id.edit_text_otp_box4);
         verify = findViewById(R.id.material_button_verify);
 
+
+        verify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendOTPActivityIntent = new Intent(OTPVerificationActivity.this, ProfessionalIdentity.class);
+                startActivity(sendOTPActivityIntent);
+            }
+        });
+
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -45,6 +54,7 @@ public class OTPVerificationActivity extends AppCompatActivity {
         setupOtpFocus(b1, b2);
         setupOtpFocus(b2, b3);
         setupOtpFocus(b3, b4);
+
 
     }
 

@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/design_default_color_background"
     android:fillViewport="true"
-    >
+    android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <!-- Toolbar -->
-
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -21,7 +19,6 @@
             android:background="@color/design_default_color_background" />
 
         <!-- Profile Image -->
-
         <ImageView
             android:id="@+id/profileImage"
             android:layout_width="150dp"
@@ -29,10 +26,9 @@
             android:layout_below="@id/toolbar"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:background="@drawable/ic_user_background"
             android:padding="9dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img" />
+            android:src="@drawable/insert_photo" />
 
         <TextView
             android:id="@+id/uploadproftext"
@@ -45,7 +41,6 @@
             android:textSize="14sp" />
 
         <!-- Upload Clearance -->
-
         <TextView
             android:id="@+id/uploadClearancetext"
             android:layout_width="wrap_content"
@@ -79,7 +74,6 @@
             android:layout_marginEnd="25dp"/>
 
         <!-- Upload ID -->
-
         <TextView
             android:id="@+id/uploadvalidIDtext"
             android:layout_width="wrap_content"
@@ -104,7 +98,6 @@
             android:layout_marginEnd="25dp"/>
 
         <!-- Preferred Location -->
-
         <TextView
             android:id="@+id/pref_location"
             android:layout_width="wrap_content"
@@ -130,12 +123,11 @@
                 android:clickable="true"
                 android:focusable="false"
                 android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"/>
-
+                android:layout_marginEnd="25dp"
+                app:boxBackgroundColor="#F5F5F5"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- DOB -->
-
         <TextView
             android:id="@+id/DOBinput"
             android:layout_width="wrap_content"
@@ -162,109 +154,124 @@
                 android:clickable="true"
                 android:focusable="false"
                 android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"/>
-
+                android:layout_marginEnd="25dp"
+                app:boxBackgroundColor="#F5F5F5"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Salary Type -->
-
-        <TextView
-            android:id="@+id/salaryTypeText"
-            android:layout_width="wrap_content"
+        <!-- Salary Type Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/salaryTypeCard"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/text_input_DOB"
             android:layout_marginTop="20dp"
-            android:text="Salary Type"
-            android:textStyle="bold"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"/>
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:padding="16dp"
+            app:boxBackgroundColor="#F5F5F5">
 
-        <RadioGroup
-            android:id="@+id/salaryTypeGroup"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/salaryTypeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salary Type"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="10dp"/>
+
+                <RadioGroup
+                    android:id="@+id/salaryTypeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radioHour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Per Hour"/>
+
+                    <RadioButton
+                        android:id="@+id/radioDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Per Day"/>
+
+                    <RadioButton
+                        android:id="@+id/radioWeek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Per Week"/>
+
+                    <RadioButton
+                        android:id="@+id/radioMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Per Month"/>
+
+                    <RadioButton
+                        android:id="@+id/radioProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Per Project"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Salary Range Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/salaryRangeCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/salaryTypeText"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/radioHour"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Per Hour"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"/>
-
-            <RadioButton
-                android:id="@+id/radioDay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Per Day"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"/>
-
-            <RadioButton
-                android:id="@+id/radioWeek"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Per Week"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"/>
-
-            <RadioButton
-                android:id="@+id/radioMonth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Per Month"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"/>
-
-            <RadioButton
-                android:id="@+id/radioProject"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Per Project"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="25dp"/>
-
-        </RadioGroup>
-
-        <!-- Salary Range -->
-
-        <TextView
-            android:id="@+id/salaryRangeTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/salaryTypeGroup"
-            android:layout_marginTop="15dp"
-            android:text="Salary Range"
-            android:textStyle="bold"
+            android:layout_below="@id/salaryTypeCard"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"/>
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:padding="16dp">
 
-        <RadioGroup
-            android:id="@+id/salaryRangeGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/salaryRangeTitle"
-            android:orientation="vertical"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/salaryRangeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salary Range"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <RadioGroup
+                    android:id="@+id/salaryRangeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!-- Save Button -->
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/savebtn"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/salaryRangeGroup"
+            android:layout_below="@id/salaryRangeCard"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
             android:text="Save"
             app:backgroundTint="#0D47A1"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            />
-
+            app:cornerRadius="12dp"/>
     </RelativeLayout>
-
 </ScrollView>

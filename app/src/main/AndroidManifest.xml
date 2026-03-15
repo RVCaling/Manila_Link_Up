@@ -36,6 +36,35 @@
             android:exported="false"
             android:label="Login to Manila LinkUp"
             android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".ProfessionalIdentity"
+            android:exported="false"
+            android:label="Professional Identity"
+            android:parentActivityName=".OTPVerificationActivity" />
+
+        <activity
+            android:name=".JobSeekerDashboardActivity"
+            android:exported="false"
+            android:label="Job Seeker Dashboard"
+            android:parentActivityName=".ProfessionalIdentity" />
+
+        <activity android:name=".SavedJobsActivity"
+            android:exported="true"
+            android:label="Saved Jobs"
+            android:parentActivityName=".JobSeekerDashboardActivity"/>
+
+        <activity android:name=".ScheduleActivity"
+            android:exported="true"
+            android:label="Schedule"
+            android:parentActivityName=".JobSeekerDashboardActivity"/>
+
+        <activity android:name=".ProfileActivity"
+            android:exported="true"
+            android:label="Profile"
+            android:parentActivityName=".JobSeekerDashboardActivity"/>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -44,7 +73,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
     </application>
 
 </manifest>
