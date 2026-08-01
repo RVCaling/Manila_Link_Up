@@ -44,7 +44,7 @@ We are currently studying Computer Science and this project was developed as a r
 ## Developers
 
 - Precious Irish Carpio (Project Lead)
-- Rhovique Caling
+- Roehvique Vjorn M. Caling
 - Loraine Gulo
 - Dino Dumanon
 
